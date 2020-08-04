@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> New Connection </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+      <form class="formclass-new" method="post" action="/connections">
+        <table class="table-newconn">
+            <tr>
+              <td><label class="label"> Category : </label></td>
+              <td><input name="category" class="textbox" type="text" placeholder="Topic" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Name : </label></td>
+              <td><input name="connectionName" class="textbox" type="text" placeholder="Name" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Details : </label></td>
+              <td><textarea name="details" rows="8" cols="80" placeholder="Details" required></textarea></td>
+            </tr>
+						<tr>
+              <td><label class="label"> Host/Owner of connection : </label></td>
+              <td><input name="host" class="textbox" type="text" value="<%= user.firstName %>" readonly></td>
+            </tr>
+						<tr>
+							<td><label class="label"> userID of connection Owner: </label></td>
+							<td><input name="userId" class="textbox" type="text" value="<%= user.userId %>" readonly></td>
+						</tr>
+						<tr>
+              <td><label class="label"> Where (place) : </label></td>
+              <td><input name="place" class="textbox" type="text" placeholder="Place" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> When (Date) : </label></td>
+							<td><input name="date" class="Date" type="date" required><label class="label"> Time : </label><input name="time" class="Time" type="time" required></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input class="newconn-submit" type="submit" value="Submit">
+              </td>
+            </tr>
+						<% if(errorMessage != "") { %>
+						<tr>
+							<td colspan="2"><label class="errormessage"> <%= errorMessage %> </label> </td>
+						</tr>
+						<% } %>
+        </table>
+      </form>
+	  </div>
+	</main>
+	<% include partials/footer.ejs %>
+</body>
+</html>

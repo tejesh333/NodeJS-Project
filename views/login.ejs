@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Login page </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+ <body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+      <form class="form-login" method="post" action="/loginsuccess">
+        <table class="table-newconn">
+            <tr>
+              <th id="heading" colspan="2">Welcome to Indian Agro Services</th>
+            </tr>
+            <tr>
+              <td colspan="2"> &nbsp; </td>
+            </tr>
+            <tr>
+              <td id="labeltext" colspan="2"> Please enter userID and Password </td>
+            </tr>
+            <tr>
+              <td colspan="2"> &nbsp; </td>
+            </tr>
+            <tr>
+              <td><label class="label"> UserId : </label></td>
+              <td><input name="userId" class="textbox" type="text" placeholder="userId" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Password : </label></td>
+              <td><input name="password" class="textbox" type="password" placeholder="password" required></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input class="login-submit" type="submit" value="login">&nbsp;&nbsp;<input class="login-submit" type="reset" value="Cancel"></td>
+						</tr>
+						<% if(error == 1) { %>
+						<tr>
+						  <td>&nbsp;</td>
+			        <td> <label class="errormessage"> * userId or password is incorrect</label> </td>
+			       </tr>
+						<% } %>
+						<% if(errorMessage != "") { %>
+						<tr>
+							<td>&nbsp;</td>
+							<td> <label class="errormessage"> <%= errorMessage %> </label> </td>
+						</tr>
+						<% } %>
+			   </table>
+      </form>
+	  </div>
+	</main>
+	<% include partials/footer.ejs %>
+ </body>
+</html>

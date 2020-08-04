@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> My Profile Page </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+			<h4><%= user.firstName %> RSVP Connections</h4>
+			<div class="sub-container2">
+				<table class="savedconn-table">
+				  <tr>
+				    <th>Connection Name</th>
+				    <th>Category</th>
+				    <th>rsvp</th>
+				    <th></th>
+				  </tr>
+				 <% profile.forEach(function(item) { %>
+				 <tr>
+					<td><%= item.connectionName %></td>
+				    <td><%=item.category %></td>
+				    <td><%=item.rsvp %></td>
+				    <td> <button onclick="window.location.href='/Connection?id=<%= item.connectionID %>'">Update</button><button onclick="window.location.href='/savedConnections/delete?id=<%= item.connectionID %>'">Delete</button></td>
+				 </tr>
+				 <% }) %>
+				</table>
+				</div>
+
+				<div class="sub-container2">
+				<h4>Connections created by <%= user.firstName %></h4>
+				<table class="savedconn-table">
+					<tr>
+						<th>Connection Name</th>
+						<th>Category</th>
+						<th></th>
+					</tr>
+				 <% createdConnections.forEach(function(item) { %>
+				 <tr>
+					<td><%= item.connectionName %></td>
+						<td><%=item.category %></td>
+						<td> <button onclick="window.location.href='/savedConnections/editConnection?id=<%= item.connectionID %>'">Edit</button><button onclick="window.location.href='/savedConnections/deleteConnection?id=<%= item.connectionID %>'">Delete</button></td>
+				 </tr>
+				 <% }) %>
+				</table>
+			</div>
+		</div>
+	</main>
+  <% include partials/footer.ejs %>
+ </body>
+</html>

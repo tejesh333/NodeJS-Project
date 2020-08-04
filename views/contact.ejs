@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Contact Page </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+			<h4>Contact Agro services limited</h4>
+      <p>&nbsp;</p>
+      <p> For any queries, please write to us at tejesh334@gmail.com . </p>
+      <p>For urgent queies, contact Tejesh: (+91) 900328994. </p>
+		</div>
+	</main>
+  <% include partials/footer.ejs %>
+ </body>
+</html>

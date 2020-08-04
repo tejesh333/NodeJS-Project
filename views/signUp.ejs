@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> signUp page </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+ <body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+      <form class="form-login" method="post" action="/signUpSuccess">
+        <table class="table-newconn">
+						<% if(error == 1) { %>
+						<tr>
+							<td>&nbsp;</td>
+							<td> <label class="errormessage"> * emailAddress already exists!! </label> </td>
+						</tr>
+						<% } %>
+						<% if(errorMessage != "") { %>
+						<tr>
+							<td>&nbsp;</td>
+							<td> <label class="errormessage"> <%= errorMessage %> </label> </td>
+						</tr>
+						<% } %>
+            <tr>
+              <td id="labeltext" colspan="2"> please enter below details to signup </td>
+            </tr>
+            <tr>
+              <td colspan="2"> &nbsp; </td>
+            </tr>
+            <tr>
+              <td><label class="label"> First Name : </label></td>
+              <td><input name="firstName" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Last Name : </label></td>
+              <td><input name="lastName" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Email ID : </label></td>
+              <td><input name="emailAddress" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Address Line 1: </label></td>
+              <td><input name="address_1" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Address Line 2: </label></td>
+              <td><input name="address_2" class="textbox" type="text"></td>
+            </tr>
+            <tr>
+              <td><label class="label"> City : </label></td>
+              <td><input name="city" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> State : </label></td>
+              <td><input name="state" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Country : </label></td>
+              <td><input name="country" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> Zip Code : </label></td>
+              <td><input name="zipCode" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> userId : </label></td>
+              <td><input name="userId" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td><label class="label"> password : </label></td>
+              <td><input name="password" class="textbox" type="text" required></td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td><input class="login-submit" type="submit" value="Register">&nbsp;&nbsp;<input class="login-submit" type="reset" value="Cancel"></td>
+						</tr>
+        </table>
+      </form>
+	  </div>
+	</main>
+	<% include partials/footer.ejs %>
+ </body>
+</html>

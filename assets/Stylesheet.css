@@ -1,0 +1,269 @@
+*{
+	padding:0;
+	margin: 0;
+}
+
+	body{
+	background-color:#f4f4f4;
+	line-height: 1.6em;
+	padding: 20px;
+}
+
+.container1{
+	padding-top: 5px;
+	width:auto;
+	margin: auto;
+}
+
+.container2{
+	width:auto;
+	margin: auto;
+	padding: 20px;
+	font-family: verdana;
+	height: 550px;
+	overflow: auto;
+}
+
+#main-header{
+	background-color:black;
+	color: white;
+	height: 120px;
+	border-bottom: solid;
+	border-color: green;
+}
+
+.box-1{
+	padding-left: 600px;
+	padding-top: 40px;
+}
+
+.box-2{
+	padding-left: 40px;
+	padding-top: 5px;
+}
+
+#user-specific-nav {
+	background-color:black;
+	color:white;
+	width:auto;
+	margin: auto;
+}
+
+a img{
+	padding: 20px;
+	width: 150px;
+	height: 80px;
+	float: left;
+	overflow: hidden;;
+}
+
+img{
+	padding: 20px;
+	width: 150px;
+	height: 100px;
+	float: left;
+	overflow: hidden;;
+}
+
+.sub-container2{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.container3{
+	width: 500px;
+}
+
+.container4{
+	width: auto;
+	float: right;
+}
+
+.container4 #Yes{
+	background-color: green;
+	border-color: green;
+	padding: 5px;
+	color: white;
+	text-decoration: bold;
+	border-radius: 10px;
+    box-shadow: 0 9px #999;
+}
+
+.container4 #No{
+	background-color: Red;
+	border-color: Red;
+	padding: 5px;
+	color: white;
+	text-decoration: bold;
+	border-radius: 10px;
+    box-shadow: 0 9px #999;
+}
+
+.container4 #Maybe{
+	background-color: Blue;
+	border-color: blue;
+	padding: 5px;
+	color: white;
+	text-decoration: bold;
+	border-radius: 10px;
+    box-shadow: 0 9px #999;
+}
+
+#general-site-nav{
+	background-color:black;
+	color:white;
+	padding-bottom: 10px;
+}
+
+
+#user-specific-nav ul{
+	text-align: right;
+	list-style: none;
+	padding-bottom: 20px;
+}
+
+#user-specific-nav li{
+	display:inline;
+	padding-left: 20px;
+	border-right: solid;
+}
+
+#user-specific-nav a{
+	color:white;
+	text-decoration: none;
+	font-size:18px;
+	padding-right:15px;
+}
+#general-site-nav a{
+	color:white;
+	text-decoration: none;
+	font-size:18px;
+}
+
+#main-footer{
+	background-color:black;
+	color: white;
+	height: 40px;
+}
+#main-footer ul{
+	list-style: none;
+	padding-bottom: 20px;
+}
+
+#main-footer li{
+	display:inline;
+	padding-left: 20px;
+}
+
+#main-footer a{
+	color:white;
+	text-decoration: none;
+	font-size:18px;
+	padding-right:15px;
+}
+.list1 ul{
+	list-style: none;
+	padding-bottom: 20px;
+}
+
+.list1 li{
+	padding-left: 20px;
+}
+
+.list1 a{
+	text-decoration: none;
+	font-size:18px;
+	padding-right:15px;
+}
+
+table{
+	padding-top: 40px;
+	border: 1px solid black;
+	border-width: 2px;
+  border-collapse: collapse;
+}
+
+th, td {
+  	padding: 5px;
+  	border: 1px solid black;
+  	border-width: 2px;
+  	border-collapse: collapse;
+}
+
+td button{
+	background-color: black;
+	border-color: white;
+	padding: 5px;
+	color: white;
+	text-decoration: bold;
+	padding-right: 5px;
+}
+
+.place-holder{
+	float: right;
+	text-decoration: bold;
+	color: Yellow;
+	padding-right: 20px;
+}
+
+.table-newconn{
+	padding-top: 5px;
+	width:auto;
+	margin: auto;
+	font-size: 25px;
+	border-width: 0px;
+}
+
+.table-newconn tr{
+		border-width: 0px;
+		padding: 50px;
+}
+
+.textbox{
+	height: 30px;
+	width: 100%;
+}
+
+.newconn-submit{
+	float: right;
+	background-color: black;
+	border-color: white;
+	color: white;
+	height: 40px;
+	width: 100px;
+	text-decoration: bold;
+	padding-right: 5px;
+}
+
+.login-submit{
+	background-color: black;
+	border-color: white;
+	color: white;
+	height: 40px;
+	width: 100px;
+	text-decoration: bold;
+	padding-right: 5px;
+}
+
+.table-newconn td{
+		border-width: 0px;
+}
+
+#heading{
+	background-color: black;
+	color: white;
+}
+
+#labeltext{
+	font-style: italic;
+	color: green;
+	font-size: 20px;
+}
+
+.errormessage{
+	font-style: italic;
+	color: red;
+	style:bold;
+	font-size:15px;
+	font-family: verdana;
+}

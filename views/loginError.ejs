@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Login Error </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+	     <h4>Oops!! You haven't logged in yet to RSVP the connection. Please click on above <b>login</b> to login or click <a href="/Connections"> here </a> to go back to all connections.</h4>
+		</div>
+	 </main>
+	 <% include partials/footer.ejs %>
+ </body>
+</html>

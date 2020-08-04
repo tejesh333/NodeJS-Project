@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Index Page </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+			<h4>Welcome to the Agro services limited,</h4> <p> &nbsp; </p>
+
+			<p>With a view towards enhancing the growth of agriculture in India, by providing much needed knowledge, consultancy and products to the industry, while simultaneously creating awareness about the breakthroughs in the industry that would provide a boost for the Indian farmers.</p><p> &nbsp; </p>
+
+			<p>By basing ourselves on the features demanded by resorts of India and local farmers, we have created innovative, user-friendly agricultural systems that are now available to small and medium-sized companies.</p><p>&nbsp;</p>
+
+			<p>Our expertise in consultancy & Quality products in agricultural industry provided us with the knowledge to develop solutions that answer the needs of todays clients.</p>&nbsp;<p>&nbsp;</p>&nbsp;<p>&nbsp;</p>&nbsp;<p>&nbsp;</p>&nbsp;<p></p>
+		</div>
+	</main>
+	<% include partials/footer.ejs %>
+</body>
+</html>

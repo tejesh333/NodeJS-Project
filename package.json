@@ -1,0 +1,20 @@
+{
+  "name": "milestone2",
+  "version": "1.0.0",
+  "description": "Mile stone 2 of main project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tejesh Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "alert-node": "^2.0.3",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "express-validator": "^6.3.0",
+    "mongoose": "^5.7.10"
+  }
+}

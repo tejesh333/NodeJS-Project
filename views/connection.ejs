@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> Connection Details Page </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+  <body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+			<form method='post'>
+				<h4><%= connectionDetails.connectionName %></h4>
+				<img src="/assets/professor.jpg" alt="Professor image"/>
+				<div class="container4">
+					<p>Are you joining?</p>
+					<input id="Yes" type="submit" value="Yes" formaction="/savedConnections?rsvp=Yes&id=<%= connectionDetails.connectionID %>">
+					<input id="No" type="submit" value="No" formaction="/savedConnections?rsvp=No&id=<%= connectionDetails.connectionID %>">
+					<input id="Maybe" type="submit" value="May be" formaction="/savedConnections?rsvp=mayBe&id=<%= connectionDetails.connectionID %>">
+				</div>
+				<div class="sub-container2">
+					<p>Hosted by: <%= connectionDetails.host %></p>
+					<p>Category: <%= connectionDetails.category %></p>
+					<p><%= connectionDetails.dateTime %></p>
+					<p><%= connectionDetails.place %></p>
+				</div>
+				<div class="container2">
+					<h4>Details:</h4>
+					<p><%= connectionDetails.details %></p>
+				</div>
+			</form>
+		</div>
+	 </main>
+	 <% include partials/footer.ejs %>
+  </body>
+</html>

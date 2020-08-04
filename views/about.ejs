@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> About </title>
+	<link rel="stylesheet" type="text/css" href="assets/Stylesheet.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<% if(headerFlag == 1) { %>
+	<% include partials/header.ejs %>
+	<% include partials/navigation.ejs %>
+	<% } else if (headerFlag == 2) { %>
+	<% include partials/header2.ejs %>
+	<% include partials/navigation2.ejs %>
+	<% } %>
+	<main>
+		<div class="container2">
+			<h4>About Agro services limited</h4>
+      <p>&nbsp;</p>
+      <p> Our expertise in consultancy & Quality products in agricultural industry provided us with the knowledge to develop solutions that answer the needs of todays clients. </p>
+      <p>&nbsp;</p>
+      <p> Please click on the below contact link for contact details.</p>
+		</div>
+	</main>
+  <% include partials/footer.ejs %>
+ </body>
+</html>
