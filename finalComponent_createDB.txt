@@ -1,0 +1,25 @@
+
+use agroservices1
+
+db.createCollection('connections')
+
+db.createCollection('users')
+
+db.createCollection('userprofiles')
+
+db.connections.insertMany([{connectionID:1 , connectionName:'Training about organic farming' , category:'Training/Awareness Camps for farmers', host:'Tejesh', details:'This is a training program on importance of Organic forming. Please do register for the training.' ,place: 'Room 205, Sivaji complex' ,dateTime: '2020-02-22 10:00', userId:'Tejesh123'},
+{connectionID:2 , connectionName:'Awareness camp on importance of Agro forestry' , category:'Training/Awareness Camps for farmers', host:'Moulika' , details:'This is a training program on importance of Agro forestry. Please do register for the training.' ,place: 'Room 211, Tejsh Hall', dateTime:  '2020-02-22 10:00', userId:'Moulika123'},
+{connectionID:3 , connectionName:'Analysis of soil and water' , category:'Training/Awareness Camps for farmers' , host:'Sandhya', details:'This is a training program on Soil and moisture Analysis. Please do register for the training.' ,place: 'Room 110, Barton Creek Drive', dateTime:  '2020-01-20 12:00', userId:'Sandy333'},
+{connectionID:4 , connectionName:'High yielding paddy' , category:'Research Programmes', host:'Sandhya' , details:'This is a research program on scientific methods to yield paddy. Please do register for the research.' ,place: 'Room 200, Calley Creek Drive' , dateTime: '2020-03-10 10:30', userId:'Sandy333'},
+{connectionID:5 , connectionName:'Increase of productivity in corn' , category:'Research Programmes', host:'Moulika' , details:'This is a research program on scientific methods to increase productivity of corn. Please do register for the research.' ,place: 'Room 209, Mysore palace' , dateTime: '2020-01-01 09:00', userId:'Moulika123'},
+{connectionID:6 , connectionName:'Hybrid vegetables' , category:'Research Programmes', host:'Tejesh' , details:'This is a research program on hybrid vegitables. Please do register for the research.' ,place: 'Room 200, Norway Hall' , dateTime: '2019-12-30 16:00',userId:'Tejesh123'}]);
+
+
+db.users.insertMany([{userId:'Tejesh123', firstName:'Tejesh',lastName: 'Parangi',emailAddress:'tejesh333@gmail.com',address_1:'Nemallapudi',address_2:'punnepalli',city:'Nellore',state:'Andhra',country:'India',zipCode:'524421',password:'f09ccdffec8cdd82388a19d10e5427791c44013ba6cad46cd52c2504b47a7892b693f55c740c9a0dd818259345604b73b455441850c46c66cc495b1a156c6106', salt:'e445fa23a67a6753'},
+{userId:'Moulika123', firstName:'Moulika',lastName:'Parangi',emailAddress:'Mouli333@gmail.com',address_1:'Nemallapudi',address_2:'punnepalli',city:'Nellore',state:'Andhra',country:'India',zipCode:'524421',password:'f09ccdffec8cdd82388a19d10e5427791c44013ba6cad46cd52c2504b47a7892b693f55c740c9a0dd818259345604b73b455441850c46c66cc495b1a156c6106', salt:'e445fa23a67a6753'},
+{userId:'Sandy333', firstName:'Sandhya',lastName:'Munagala',emailAddress:'sandu@gmail.com',address_1:'220 E',address_2:'Barton Creek Drive',city:'Charlotte',state:'NC',country:'US',zipCode:'28262',password:'f09ccdffec8cdd82388a19d10e5427791c44013ba6cad46cd52c2504b47a7892b693f55c740c9a0dd818259345604b73b455441850c46c66cc495b1a156c6106', salt:'e445fa23a67a6753'}])
+
+
+db.userprofiles.insertMany([{userId:'Tejesh123',connections: [{connectionID:6 , connectionName:'Hybrid vegetables' , category:'Research Programmes', rsvp:'Yes'},{connectionID:2 , connectionName:'Awareness camp on importance of Agro forestry' , category:'Training/Awareness Camps for farmers', rsvp:'Maybe'}]},
+{userId:'Moulika123',connections: [{connectionID:1 , connectionName:'Training about organic farming' , category:'Training/Awareness Camps for farmers', rsvp:'Yes'},{connectionID:2 , connectionName:'Awareness camp on importance of Agro forestry' , category:'Training/Awareness Camps for farmers', rsvp:'No'}]},
+{userId:'Sandy333',connections: [{connectionID:6 , connectionName:'Hybrid vegetables' , category:'Research Programmes', rsvp:'Maybe'},{connectionID:1 , connectionName:'Training about organic farming' , category:'Training/Awareness Camps for farmers', rsvp:'Yes'}]}])
